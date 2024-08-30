@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "TargetDashboard";
+}
+
+
+<div class="panel-groupingBoder">
+    <div class="panel-heading">
+        <div class="panel-title">
+            Dashboard
+        </div>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+        <div class="panel-body">
+            <div class="container fill">
+                <fieldset>
+                    <div>
+                        <div class="row" style="margin: 10px 5px -15px 15px;">
+
+                            <div class="col-md-2">
+                                <lable class="required" for="selectedDate">Task Date</lable>
+
+                                <div class='input-group date' id='selectedDate'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                              
+                            </div>
+                            <div class="col-md-2">
+                                @Html.Label("Nature", new { @class = "required" })
+                                @Html.DropDownList("ddlNature", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                            </div>                         
+                            <div class="col-md-2">
+                                <br />
+                                <button type="button" id="btnShow" class="btn btn-primary" title="Show Task" style="padding: 2px 46px;"> Show </button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </fieldset>
+            </div>
+            <fieldset class="fieldsetCustom">
+                <legend class="legendCustom">Task Details</legend>
+                <div class="row" style="margin: 10px;">
+                    <div id="Searchgrid"></div>
+                </div>
+            </fieldset>
+            <div class="divider"></div>
+            <fieldset class="fieldsetCustom">
+                <legend class="legendCustom">Action Details</legend>
+                <div class="row" style="margin: 10px;">
+                    <div id="SearchActiongrid"></div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+@* History Pop-Up Modal*@
+<div class="modal" id="HistoryPopUpModal" role="dialog" data-backdrop="false">
+    <div class="modal-dialog" style="width:67%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-sm-8 col-md-8">
+                    <h4 class="modal-title"><b>Execution History</b></h4>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <button type="button" class="close" data-dismiss="modal" style="align-content:flex-end">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="ExecutionHistoryGrid"></div>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="~/Scripts/Dashboard/TargetDashboard.js"></script>

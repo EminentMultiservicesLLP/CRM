@@ -3,3 +3,9 @@
 ################################################################################
 
 /CommonDataLayer/bin
+/.vs
+/CommonDataLayer/obj
+/CommonLayer/bin
+/CRM/bin
+/CRM/obj
+/packages

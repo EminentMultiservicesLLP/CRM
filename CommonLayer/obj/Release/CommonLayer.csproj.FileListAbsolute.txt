@@ -1,0 +1,72 @@
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Release\log4net.config
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Release\CommonLayer.dll
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Release\CommonLayer.pdb
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Release\log4net.dll
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Release\log4net.xml
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\obj\Release\CommonLayer.csprojResolveAssemblyReference.cache
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\obj\Release\CommonLayer.dll
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\obj\Release\CommonLayer.pdb
+D:\Projects\QASeries\CommonLayer\bin\Release\log4net.config
+D:\Projects\QASeries\CommonLayer\bin\Release\CommonLayer.dll
+D:\Projects\QASeries\CommonLayer\bin\Release\CommonLayer.pdb
+D:\Projects\QASeries\CommonLayer\bin\Release\log4net.dll
+D:\Projects\QASeries\CommonLayer\bin\Release\log4net.xml
+D:\Projects\QASeries\CommonLayer\obj\Release\CommonLayer.csprojResolveAssemblyReference.cache
+D:\Projects\QASeries\CommonLayer\obj\Release\CommonLayer.dll
+D:\Projects\QASeries\CommonLayer\obj\Release\CommonLayer.pdb
+D:\Projects\PMS\CommonLayer\bin\Release\log4net.config
+D:\Projects\PMS\CommonLayer\bin\Release\CommonLayer.dll
+D:\Projects\PMS\CommonLayer\bin\Release\CommonLayer.pdb
+D:\Projects\PMS\CommonLayer\bin\Release\log4net.dll
+D:\Projects\PMS\CommonLayer\bin\Release\log4net.xml
+D:\Projects\PMS\CommonLayer\obj\Release\CommonLayer.csprojResolveAssemblyReference.cache
+D:\Projects\PMS\CommonLayer\obj\Release\CommonLayer.dll
+D:\Projects\PMS\CommonLayer\obj\Release\CommonLayer.pdb
+E:\Projects\CRM\CommonLayer\bin\Release\log4net.config
+E:\Projects\CRM\CommonLayer\bin\Release\CommonLayer.dll
+E:\Projects\CRM\CommonLayer\bin\Release\CommonLayer.pdb
+E:\Projects\CRM\CommonLayer\bin\Release\log4net.dll
+E:\Projects\CRM\CommonLayer\bin\Release\log4net.xml
+E:\Projects\CRM\CommonLayer\obj\Release\CommonLayer.csprojResolveAssemblyReference.cache
+E:\Projects\CRM\CommonLayer\obj\Release\CommonLayer.dll
+E:\Projects\CRM\CommonLayer\obj\Release\CommonLayer.pdb
+F:\Projects\CRM\CommonLayer\bin\Release\log4net.config
+F:\Projects\CRM\CommonLayer\bin\Release\CommonLayer.dll
+F:\Projects\CRM\CommonLayer\bin\Release\CommonLayer.pdb
+F:\Projects\CRM\CommonLayer\bin\Release\log4net.dll
+F:\Projects\CRM\CommonLayer\bin\Release\log4net.xml
+F:\Projects\CRM\CommonLayer\obj\Release\CommonLayer.csproj.AssemblyReference.cache
+F:\Projects\CRM\CommonLayer\obj\Release\CommonLayer.csproj.CoreCompileInputs.cache
+F:\Projects\CRM\CommonLayer\obj\Release\CommonLayer.csproj.CopyComplete
+F:\Projects\CRM\CommonLayer\obj\Release\CommonLayer.dll
+F:\Projects\CRM\CommonLayer\obj\Release\CommonLayer.pdb
+D:\CRM\CommonLayer\bin\Release\log4net.config
+D:\CRM\CommonLayer\bin\Release\CommonLayer.dll
+D:\CRM\CommonLayer\bin\Release\CommonLayer.pdb
+D:\CRM\CommonLayer\bin\Release\log4net.dll
+D:\CRM\CommonLayer\bin\Release\log4net.xml
+D:\CRM\CommonLayer\obj\Release\CommonLayer.csproj.AssemblyReference.cache
+D:\CRM\CommonLayer\obj\Release\CommonLayer.csproj.CoreCompileInputs.cache
+D:\CRM\CommonLayer\obj\Release\CommonLayer.csproj.CopyComplete
+D:\CRM\CommonLayer\obj\Release\CommonLayer.dll
+D:\CRM\CommonLayer\obj\Release\CommonLayer.pdb
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Release\log4net.config
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Release\CommonLayer.dll
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Release\CommonLayer.pdb
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Release\log4net.dll
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Release\log4net.xml
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Release\CommonLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Release\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Release\CommonLayer.csproj.CopyComplete
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Release\CommonLayer.dll
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Release\CommonLayer.pdb
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Release\log4net.config
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Release\CommonLayer.dll
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Release\CommonLayer.pdb
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Release\log4net.dll
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Release\log4net.xml
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Release\CommonLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Release\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Release\CommonLayer.csproj.CopyComplete
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Release\CommonLayer.dll
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Release\CommonLayer.pdb

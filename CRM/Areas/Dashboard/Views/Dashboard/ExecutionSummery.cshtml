@@ -1,0 +1,54 @@
+﻿    <fieldset>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-groupingBoder">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a class="collapsediv" data-toggle="collapse" href="#SearchDetails" style="color: white">
+                                Execution Summery Form
+                            </a>
+                        </div>
+                    </div>
+                        <div class="row" style="margin:11px 27px 0 21px;">
+                            <div class="col-sm-2">
+                                <label for="date" class="required">From</label>
+                  
+                                <div class='input-group date' id='startDate'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="date" class="required">To</label>
+           
+                                <div class='input-group date' id='endDate'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2" style="margin-right:-5px">
+                                <br />
+                                <button type="button" id="btnShow" class="btn btn-success" title="Click Here To Show" style="padding: 4px 26px;">Show</button>
+                            </div>
+                        </div>
+                        <div id="SearchDetails" class="panel-collapse collapse in" aria-expanded="true">
+                            <div class="panel-body">
+                                <div class="container fill">
+                                    <div id="SearchGrid"></div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+
+
+
+
+<script src="~/Scripts/Dashboard/TargetExecutionSummery.js"></script>

@@ -1,0 +1,81 @@
+﻿@model CRM.Areas.Masters.Models.ReportModel
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+
+    <fieldset>
+        <div class="panel-group">
+
+            <div class="panel panel-default">
+                <div class="panel-groupingBoder">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+
+                            <a class="collapsediv" data-toggle="collapse" href="#SearchDetails" style="color: white">
+                                Report
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container fill">
+                        <div id="SearchDetails" class="panel-collapse collapse in" aria-expanded="true">
+                            <div class="col-sm-12">
+                                <div class="col-sm-2">
+                                    @Html.Label("Select User")
+                                    @Html.DropDownList("ddlLoginName", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+
+                                </div>
+                                <div class="col-sm-2">
+                                    @Html.Label("Select Client")
+                                    @Html.DropDownList("ddlClient", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+
+                                </div>
+
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(m => m.StrStartdate, new { })
+                                    <div class='input-group date' id='StrStartdate'>
+                                        <input type='text' class="form-control" id='StrStartdate1' />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    @Html.LabelFor(m => m.StrEndDate, new { })
+                                    <div class='input-group date' id='StrEndDate'>
+                                        <input type='text' class="form-control"  id='StrEndDate1'/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12" style="padding-bottom:5px">
+                                <div class="col-md-2">
+                                    <button type="button" id="btnSave" class="btn btn-primary">Show Report</button>
+                                </div>
+                            </div>
+                            </div>
+                       
+                    </div>
+
+                    </div>
+                </div>
+                <div id="ClientWiseReportModal" style="display:none;" title="View Report">
+                    <div class="panel panel-primary" id="ResultReport">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <iframe id="iframeResultReportViewer" style="width:100%;height:640px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </fieldset>
+
+
+}
+<script src="~/Scripts/Masters/Report.js"></script>

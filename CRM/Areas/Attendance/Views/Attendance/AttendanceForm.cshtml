@@ -1,0 +1,169 @@
+﻿@model CRM.Areas.Admin.Models.UserConfigurationMaster
+<style>
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 0;
+        border-top: 1px solid #e2dcdc;
+    }
+
+    th {
+        text-align: center;
+        background-color: #E7E7E7;
+    }
+
+    .header {
+        text-align: center;
+        background-color: #337ab7;
+        color: #fff;
+    }
+
+    table {
+        border: outset;
+    }
+
+    input {
+        margin: 2px;
+    }
+</style>
+<fieldset>
+    <div class="panel-groupingBoder">
+        <div class="panel-heading">
+            <div class="panel-title">
+                Attendance Form
+            </div>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+            <div class="panel-body">
+                <div class="container fill">
+                    <div class="row">
+                        <div class="col-md-12" style="margin-left: 10px;">
+                            <button type="button" id="btnSave" class="btn btn-success" onclick="SaveAttendance()">Save</button>
+                            <button type="button" class="btn btn-warning" id="btnReset" style=" margin-left: 15px;" onclick="clearFormData()">Clear</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-3">
+                                @Html.Label("Select Financial Year", new { @class = "required" })
+                                @Html.DropDownList("ddlFinancialYear", new SelectList(string.Empty, "Value", "Text"), "-- Select Financial Year --", new { @class = " form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-sm-3">
+                                <label for="clientType" class="required">Client Type : </label>
+                                <input class="form-control" placeholder="Client Type" id="clientType" type="text" disabled />
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="totalYearlyLeaves" class="required">Total Yearly Leaves : </label>
+                                <input class="form-control" placeholder="Total Yearly Leaves" id="totalYearlyLeaves" type="text" disabled />
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="totalAbsent" class="required">Total Absent : </label>
+                                <input class="form-control" placeholder="Total Absent" id="totalAbsents" type="text" disabled />
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="balanceLeaves" class="required">Balance Leaves : </label>
+                                <input class="form-control" placeholder="Balance Leaves" id="balanceLeaves" type="text" disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="container">
+                            <table class="table @*table-bordered*@">
+                                <thead>
+                                    <tr>
+                                        <th class="header" scope="col">Months</th>
+                                        <th class="header" scope="col">Present</th>
+                                        <th class="header" scope="col">Leaves Allowed</th>
+                                        <th class="header" scope="col">Absents + Holidays</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Apr</th>
+                                        <td><input class="form-control " placeholder="Apr Present" id="aprPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Apr Leaves" id="aprLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Apr Leaves + Holidays" id="aprLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">May</th>
+                                        <td><input class="form-control " placeholder="May Present" id="mayPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="May Leaves" id="mayLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="May Leaves + Holidays" id="mayLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Jun</th>
+                                        <td><input class="form-control " placeholder="Jun Present" id="junPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Jun Leaves" id="junLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Jun Leaves + Holidays" id="junLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Jul</th>
+                                        <td><input class="form-control " placeholder="Jul Present" id="julPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Jul Leaves" id="julLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Jul Leaves + Holidays" id="julLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Aug</th>
+                                        <td><input class="form-control " placeholder="Aug Present" id="augPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Aug Leaves" id="augLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Aug Leaves + Holidays" id="augLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Sept</th>
+                                        <td><input class="form-control " placeholder="Sept Present" id="septPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Sept Leaves" id="septLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Sept Leaves + Holidays" id="septLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Oct</th>
+                                        <td><input class="form-control " placeholder="Oct Present" id="octPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Oct Leaves" id="octLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Oct Leaves + Holidays" id="octLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Nov</th>
+                                        <td><input class="form-control " placeholder="Nov Present" id="novPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Nov Leaves" id="novLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Nov Leaves + Holidays" id="novLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Dec</th>
+                                        <td><input class="form-control " placeholder="Dec Present" id="decPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Dec Leaves" id="decLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Dec Leaves + Holidays" id="decLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Jan</th>
+                                        <td><input class="form-control " placeholder="Jan Present" id="janPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Jan Leaves" id="janLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Jan Leaves + Holidays" id="janLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Feb</th>
+                                        <td><input class="form-control " placeholder="Feb Present" id="febPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Feb Leaves" id="febLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Feb Leaves + Holidays" id="febLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Mar</th>
+                                        <td><input class="form-control " placeholder="Mar Present" id="marPresent" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Mar Leaves" id="marLeavesAllowed" type="text" disabled /></td>
+                                        <td><input class="form-control " placeholder="Mar Leaves + Holidays" id="marLeavesAndHolidays" type="text" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</fieldset>
+<script src="~/Scripts/Attendance/AttendanceForm.js"></script>

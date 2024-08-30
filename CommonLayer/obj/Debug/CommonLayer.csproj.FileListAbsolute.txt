@@ -1,0 +1,123 @@
+E:\G2S-Project\BISQUIZ-UI\BISERPCommon\bin\Debug\log4net.config
+E:\G2S-Project\BISQUIZ-UI\BISERPCommon\bin\Debug\CommonLayer.dll
+E:\G2S-Project\BISQUIZ-UI\BISERPCommon\bin\Debug\CommonLayer.pdb
+E:\G2S-Project\BISQUIZ-UI\BISERPCommon\bin\Debug\log4net.dll
+E:\G2S-Project\BISQUIZ-UI\BISERPCommon\bin\Debug\log4net.xml
+E:\G2S-Project\BISQUIZ-UI\BISERPCommon\obj\Debug\CommonLayer.dll
+E:\G2S-Project\BISQUIZ-UI\BISERPCommon\obj\Debug\CommonLayer.pdb
+E:\G2S-Project\BISQUIZ-UI\CommonLayer\bin\Debug\log4net.config
+E:\G2S-Project\BISQUIZ-UI\CommonLayer\bin\Debug\CommonLayer.dll
+E:\G2S-Project\BISQUIZ-UI\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\G2S-Project\BISQUIZ-UI\CommonLayer\bin\Debug\log4net.dll
+E:\G2S-Project\BISQUIZ-UI\CommonLayer\bin\Debug\log4net.xml
+E:\G2S-Project\BISQUIZ-UI\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+E:\G2S-Project\BISQUIZ-UI\CommonLayer\obj\Debug\CommonLayer.dll
+E:\G2S-Project\BISQUIZ-UI\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Debug\log4net.config
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Debug\CommonLayer.dll
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Debug\log4net.dll
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\bin\Debug\log4net.xml
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\obj\Debug\CommonLayer.dll
+E:\E\Projects\G2S-APP\BISQUIZ-UI\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\bin\Debug\log4net.config
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\bin\Debug\log4net.dll
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\bin\Debug\log4net.xml
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\obj\Debug\CommonLayer.csprojAssemblyReference.cache
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\obj\Debug\CommonLayer.csproj.CoreCompileInputs.cache
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\obj\Debug\CommonLayer.csproj.CopyComplete
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Code Backup\BISQuiz\G2S Web\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\G2S\G2S Web\CommonLayer\bin\Debug\log4net.config
+D:\G2S\G2S Web\CommonLayer\bin\Debug\CommonLayer.dll
+D:\G2S\G2S Web\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\G2S\G2S Web\CommonLayer\bin\Debug\log4net.dll
+D:\G2S\G2S Web\CommonLayer\bin\Debug\log4net.xml
+D:\G2S\G2S Web\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+D:\G2S\G2S Web\CommonLayer\obj\Debug\CommonLayer.dll
+D:\G2S\G2S Web\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Projects\QASeries\CommonLayer\bin\Debug\log4net.config
+D:\Projects\QASeries\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Projects\QASeries\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Projects\QASeries\CommonLayer\bin\Debug\log4net.dll
+D:\Projects\QASeries\CommonLayer\bin\Debug\log4net.xml
+D:\Projects\QASeries\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Projects\QASeries\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Projects\QASeries\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+D:\Projects\PMS\CommonLayer\bin\Debug\log4net.config
+D:\Projects\PMS\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Projects\PMS\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Projects\PMS\CommonLayer\bin\Debug\log4net.dll
+D:\Projects\PMS\CommonLayer\bin\Debug\log4net.xml
+D:\Projects\PMS\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+D:\Projects\PMS\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Projects\PMS\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Projects\CRM\CommonLayer\bin\Debug\log4net.config
+D:\Projects\CRM\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Projects\CRM\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Projects\CRM\CommonLayer\bin\Debug\log4net.dll
+D:\Projects\CRM\CommonLayer\bin\Debug\log4net.xml
+D:\Projects\CRM\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Projects\CRM\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Projects\CRM\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+E:\Projects\CRM\CommonLayer\bin\Debug\log4net.config
+E:\Projects\CRM\CommonLayer\bin\Debug\CommonLayer.dll
+E:\Projects\CRM\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\Projects\CRM\CommonLayer\bin\Debug\log4net.dll
+E:\Projects\CRM\CommonLayer\bin\Debug\log4net.xml
+E:\Projects\CRM\CommonLayer\obj\Debug\CommonLayer.dll
+E:\Projects\CRM\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\Projects\CRM\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+D:\CRM\CommonLayer\bin\Debug\log4net.config
+D:\CRM\CommonLayer\bin\Debug\CommonLayer.dll
+D:\CRM\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\CRM\CommonLayer\bin\Debug\log4net.dll
+D:\CRM\CommonLayer\bin\Debug\log4net.xml
+D:\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.AssemblyReference.cache
+D:\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CoreCompileInputs.cache
+D:\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CopyComplete
+D:\CRM\CommonLayer\obj\Debug\CommonLayer.dll
+D:\CRM\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Debug\log4net.config
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Debug\log4net.dll
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\bin\Debug\log4net.xml
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CopyComplete
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\Admin\Documents\CRM\New folder\CRM\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Debug\log4net.config
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Debug\log4net.dll
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\bin\Debug\log4net.xml
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CopyComplete
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\Admin\Documents\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\bin\Debug\log4net.config
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\bin\Debug\log4net.dll
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\bin\Debug\log4net.xml
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.AssemblyReference.cache
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CoreCompileInputs.cache
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CopyComplete
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Admin\Meghna Work\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Admin\Projects\CRM\CRM\CommonLayer\bin\Debug\log4net.config
+D:\Admin\Projects\CRM\CRM\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Admin\Projects\CRM\CRM\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Admin\Projects\CRM\CRM\CommonLayer\bin\Debug\log4net.dll
+D:\Admin\Projects\CRM\CRM\CommonLayer\bin\Debug\log4net.xml
+D:\Admin\Projects\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.AssemblyReference.cache
+D:\Admin\Projects\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CoreCompileInputs.cache
+D:\Admin\Projects\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.csproj.CopyComplete
+D:\Admin\Projects\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Admin\Projects\CRM\CRM\CommonLayer\obj\Debug\CommonLayer.pdb

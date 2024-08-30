@@ -1,0 +1,159 @@
+﻿@model CRM.Areas.Admin.Models.UserConfigurationMaster
+<style>
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 0;
+        border-top: 1px solid #e2dcdc;
+    }
+    .row {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .checkboxfreeze {
+        position: absolute;
+    }
+    .table-bordered {
+        padding: 10px;
+        background-color: aliceblue;
+        border-radius: 3px;
+    }
+</style>
+<fieldset>
+
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-groupingBoder">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a class="collapsediv" data-toggle="collapse" href="#ConfigDetails" style="color: white">
+                            Configuration Details
+                        </a>
+                    </div>
+                </div>
+                <div id="ConfigDetails" class="panel-collapse collapse in" aria-expanded="true">
+                    <div class="panel-body">
+                        <div class="container fill">
+                            <div id="ConfigDetailsGrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="panel-groupingBoder">
+        <div class="panel-heading">
+            <div class="panel-title">
+                Create Configuration
+            </div>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+            <div class="panel-body">
+                <div class="container fill">
+                    <div class="row">
+                        <div class="col-md-12" style="margin-left: 10px;">
+                            <button type="button" id="btnSave" class="btn btn-success" onclick="saveConfig()">Save</button>
+                            <button type="button" class="btn btn-warning" id="btnReset" style=" margin-left: 15px;" onclick="clearFormData()">Clear</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            @Html.Label("Select User", new { @class = "required" })
+                            @Html.DropDownList("ddlUser", new SelectList(string.Empty, "Value", "Text"), "-- Select User --", new { @class = " form-control" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.Label("Select Client Type", new { @class = "required" })
+                            @Html.DropDownList("ddlClientType", new SelectList(string.Empty, "Value", "Text"), "-- Select Client Type --", new { @class = " form-control" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.Label("Select Financial Year", new { @class = "required" })
+                            @Html.DropDownList("ddlFinancialYear", new SelectList(string.Empty, "Value", "Text"), "-- Select Financial Year --", new { @class = " form-control" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1 table-bordered">
+                            <label for="apr" class="required">Apr : </label>
+                            <input class="form-control" placeholder="April" id="apr" type="text" style="margin: 5px;" />
+                            <label for="aprFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="aprFreeze" name="aprFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="may" class="required">May : </label>
+                            <input class="form-control" placeholder="May" id="may" type="text" style="margin: 5px;" />
+                            <label for="mayFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="mayFreeze" name="mayFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="jun" class="required">Jun : </label>
+                            <input class="form-control" placeholder="Jun" id="jun" type="text" style="margin: 5px;" />
+                            <label for="junFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="junFreeze" name="junFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="jul" class="required">Jul : </label>
+                            <input class="form-control" placeholder="July" id="jul" type="text" style="margin: 5px;" />
+                            <label for="julFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="julFreeze" name="julFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="aug" class="required">Aug : </label>
+                            <input class="form-control" placeholder="August" id="aug" type="text" style="margin: 5px;" />
+                            <label for="augFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="augFreeze" name="augFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="sept" class="required">Sept : </label>
+                            <input class="form-control" placeholder="September" id="sept" type="text" style="margin: 5px;" />
+                            <label for="septFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="septFreeze" name="septFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="oct" class="required">Oct : </label>
+                            <input class="form-control" placeholder="October" id="oct" type="text" style="margin: 5px;" />
+                            <label for="octFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="octFreeze" name="octFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="nov" class="required">Nov : </label>
+                            <input class="form-control" placeholder="November" id="nov" type="text" style="margin: 5px;" />
+                            <label for="novFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="novFreeze" name="novFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="dec" class="required">Dec : </label>
+                            <input class="form-control" placeholder="December" id="dec" type="text" style="margin: 5px;" />
+                            <label for="decFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="decFreeze" name="decFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="jan" class="required">Jan : </label>
+                            <input class="form-control" placeholder="January" id="jan" type="text" style="margin: 5px;" />
+                            <label for="janFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="janFreeze" name="janFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="feb" class="required">Feb : </label>
+                            <input class="form-control" placeholder="February" id="feb" type="text" style="margin: 5px;" />
+                            <label for="febFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="febFreeze" name="febFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                        <div class="col-sm-1 table-bordered">
+                            <label for="mar" class="required">Mar : </label>
+                            <input class="form-control" placeholder="March" id="mar" type="text" style="margin: 5px;" />
+                            <label for="marFreeze" style="font-weight: 500;">Freeze : </label>
+                            <input class="checkboxfreeze" id="marFreeze" name="marFreeze" type="checkbox" style="margin: 5px;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</fieldset>
+<script src="~/Scripts/Admin/UserConfigurationMaster.js"></script>

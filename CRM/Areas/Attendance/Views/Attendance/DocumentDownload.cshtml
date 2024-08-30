@@ -1,0 +1,42 @@
+﻿<fieldset>
+    <div class="panel-groupingBoder">
+        <div class="panel-heading">
+            <div class="panel-title">
+                Download Documents
+            </div>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+            <div class="panel-body">
+                <div class="container fill">
+                    <div class="row">
+                        <div class="col-xs-12 col-xs-12">
+                            <fieldset class="fieldsetCustom">
+                                <div class="row col-sm-12 col-md-12">
+                                    <div class="row">
+                                        <div class="container">
+                                            <div class="col-md-3">
+                                                @Html.Label("Select Financial Year", new { @class = "required" })
+                                                @Html.DropDownList("ddlFinancialYear", new SelectList(string.Empty, "Value", "Text"), "-- Select Financial Year --", new { @class = " form-control" })
+                                            </div>
+                                            <div class="col-md-3">
+                                                @Html.Label("Select User", new { @class = "required" })
+                                                @Html.DropDownList("ddlUser", new SelectList(string.Empty, "Value", "Text"), "-- Select User --", new { @class = " form-control" })
+                                            </div>
+                                            <div class="col-md-3" style="margin-left: 10px; margin-top: 15px;">
+                                                <button type="button" id="download" class="btn btn-success download" onclick="downloadDocument()">DownLoad</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</fieldset>
+<script src="~/Scripts/JSZip3.5.0.js"></script>
+<script src="~/Scripts/Attendance/DocumentDownload.js"></script>

@@ -1,0 +1,192 @@
+﻿@model CRM.Areas.Masters.Models.ClientMasterModel
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+   
+        <fieldset>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-groupingBoder">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <a class="collapsediv" data-toggle="collapse" href="#SearchDetails" style="color: white">
+                                    Client Details
+                                </a>
+                            </div>
+                        </div>
+                        <div id="SearchDetails" class="panel-collapse collapse in" aria-expanded="true">
+                            <div class="panel-body">
+                                <div class="container fill">
+                                    <div id="Searchgrid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="panel-groupingBoder">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        Client Detail Entry Form
+                    </div>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+                    <div class="panel-body">
+                        <div class="container fill">
+                            <fieldset>
+
+                                <div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button type="button" id="btnNewEntry" class="btn btn-success" title="Click Here To Create New Entry">New Entry</button>
+                                            <button type="button" id="btnSave" class="btn btn-success" title="Click Here To Save">Save</button>
+                                            <button type="button" id="btnAdd" class="btn btn-success" title="Click Here To Reset">Reset</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="row">
+
+                                    <div class="form-group">
+                                        <div class="col-sm-2">
+
+                                            @Html.CheckBoxFor(model => model.Deactive, new { })
+                                            @Html.Label("Deactive Client")
+                                        </div>
+                                        <div class="col-sm-2">
+                                            @Html.CheckBoxFor(model => model.IsCompleted, new { })
+                                            @Html.LabelFor(model => model.IsCompleted)
+                                        </div>
+                                        <div id="Hidden" style="display: none">
+
+                                            <div class="col-sm-3">
+                                                @Html.LabelFor(model => model.IsCompletedRemark, new { @class = "required" })
+                                                @Html.TextBoxFor(model => model.IsCompletedRemark, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(model => model.IsCompletedRemark)
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                @*<hr style="border-bottom:solid 0.2px white;" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <b>Address</b>
+                    </div>
+                </div>*@
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        @Html.LabelFor(model => model.ClientName, new { @class = "required" })
+                                        @Html.TextBoxFor(model => model.ClientName, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.ClientName)
+                                        @Html.HiddenFor(model => model.ClientId)
+                                    </div>
+                                    <div class="col-md-5">
+                                        @Html.LabelFor(model => model.Address)
+                                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+                                    </div>
+                                    <div class="col-md-2">
+                                        @Html.LabelFor(model => model.Landmark)
+                                        @Html.TextBoxFor(model => model.Landmark, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Landmark)
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+
+                                    <div class="col-sm-2">
+                                        @Html.Label("Sector")
+                                        @Html.DropDownList("ddlSector", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.Label("Speciality")
+                                        @Html.TextBoxFor(model => model.Speciality, new { @class = "form-control" })
+                                    </div><div class="col-md-2">
+                                        @Html.Label("No Of Students")
+                                        @Html.TextBoxFor(model => model.NoOfStudents, new { @type = "number", @class = "form-control" })
+                                    </div>
+                                    <div class="col-md-2">
+                                        @Html.Label("Units")
+                                        @Html.TextBoxFor(model => model.Unit, new { @type = "number", @class = "form-control" })
+                                    </div>
+
+                                </div>
+
+                                @*<hr style= "border-bottom:solid 0.2px white;" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <b>Contact Person Details</b>
+                    </div>
+                </div>*@
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        @Html.LabelFor(model => model.ContactPersonOne)
+                                        @Html.TextBoxFor(model => model.ContactPersonOne, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.ContactPersonOne)
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.ContactDesignationOne)
+                                        @Html.TextBoxFor(model => model.ContactDesignationOne, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.ContactDesignationOne)
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        @Html.LabelFor(model => model.PhoneOne)
+                                        @Html.TextBoxFor(model => model.PhoneOne, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.PhoneOne)
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        @Html.LabelFor(model => model.EmailOne)
+                                        @Html.TextBoxFor(model => model.EmailOne, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.EmailOne)
+                                    </div>
+
+                                </div>
+                                @*<div class="row">
+
+                                    <div class="col-md-2">
+                                        @Html.LabelFor(model => model.ContactPersonTwo)
+                                        @Html.TextBoxFor(model => model.ContactPersonTwo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.ContactPersonTwo)
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.ContactDesignationTwo)
+                                        @Html.TextBoxFor(model => model.ContactDesignationTwo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.ContactDesignationTwo)
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        @Html.LabelFor(model => model.PhoneTwo)
+                                        @Html.TextBoxFor(model => model.PhoneTwo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.PhoneTwo)
+                                    </div>
+                                    <div class="col-md-2">
+                                        @Html.LabelFor(model => model.EmailTwo)
+                                        @Html.TextBoxFor(model => model.EmailTwo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.EmailTwo)
+                                    </div>
+                                </div>*@
+
+                            </fieldset>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </fieldset>
+   
+
+    <script type="text/javascript" src="~/Scripts/Masters/ClientMaster.js"> </script>
+
+}

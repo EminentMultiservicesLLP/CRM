@@ -1,0 +1,96 @@
+﻿@model CRM.Areas.Masters.Models.FeedbackMaster
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+
+    <fieldset>
+       
+            <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-groupingBoder">
+                            <div class="panel-heading">
+
+                                <div class="panel-title">
+
+                                    Client Feedback
+                                </div>
+                            </div>
+                            <div class="container fill">
+                                <div class="col-sm-12" style="padding-top:15px">
+                                    <div class="=row">
+                                        @*<div class="row">*@
+                                        <div class="col-sm-2">
+                                            @Html.Label("Client Name")
+                                            @Html.DropDownList("ddlClient", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                        </div>
+                                        <div class="col-sm-2">
+                                            @Html.Label("Customer Answer")
+                                            @Html.DropDownList("ddlAnswer", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                        </div>
+                                        <div class="col-sm-2">
+                                            @Html.Label("Contact Type")
+                                            @Html.DropDownList("ddlType", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                        </div>
+                                        <div class="col-sm-2">
+                                            @Html.LabelFor(m => m.NextFollowUpDate, new { })
+                                            <div class='input-group date' id='NextFollowUpDate'>
+                                                <input type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    @*</div>*@
+
+                                    @*<div class="row">*@
+
+                                    <div class="col-sm-12"  >
+                                        <div class="=row" >
+                                            <div class="col-md-4">
+                                                @Html.LabelFor(model => model.Remark, new { @class = "required" })
+                                                @Html.TextBoxFor(model => model.Remark, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(model => model.Remark)
+                                            </div>
+                                            @*<div class="col-sm-2" style="padding-top:15px">
+                                                @Html.CheckBoxFor(model => model.IsCompleted, new { })
+                                                @Html.LabelFor(model => model.IsCompleted)
+                                            </div>
+                                            <div id="Hidden" style="display: none">
+                                                
+                                                    <div class="col-sm-4">
+                                                        @Html.LabelFor(model => model.IsCompletedRemark, new { @class = "required" })
+                                                        @Html.TextBoxFor(model => model.IsCompletedRemark, new { @class = "form-control" })
+                                                        @Html.ValidationMessageFor(model => model.IsCompletedRemark)
+                                                </div>
+
+
+                                            </div>*@
+                                            <div class="col-md-2" style="padding-top:15px">
+                                                <button type="button" id="btnSave" class="btn btn-success" title="Click Here To Save">Save</button>
+                                            </div>
+                                        </div>
+
+
+
+                                        @*</div>*@
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+              
+        </div>
+       
+        </fieldset>
+
+
+}
+<script src="~/Scripts/Masters/Feedbackmaster.js"></script>

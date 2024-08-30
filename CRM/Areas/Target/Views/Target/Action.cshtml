@@ -1,0 +1,111 @@
+﻿@model CRM.Areas.Target.Models.ActionMasterModel
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-groupingBoder">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a class="collapsediv" data-toggle="collapse" href="#SearchDetails" style="color: white">
+                              Action Master
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="SearchDetails" class="panel-collapse collapse in" aria-expanded="true">
+                        <div class="panel-body">
+                            <div class="container fill">
+                                <div id="Searchgrid"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="panel-groupingBoder">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    Action Master Entry Form
+                </div>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="container fill">
+                        <fieldset>
+                            <div>
+                                <div class="row" style="margin-left: 5px; margin-top: 5px;">
+                                    <div class="col-sm-12">
+                                        <button type="button" id="btnSave" class="btn btn-success" title="Click Here To Save">Save</button>
+                                        <button type="button" id="btnReset" class="btn btn-warning" title="Click Here To Reset">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="row" style="margin-left: 5px; margin-top: 5px;">
+                                <div class="col-md-2">
+                                    @Html.Label("Nature", new { @class = "required" })
+                                    @Html.DropDownList("ddlNature", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                </div>
+                                <div class="col-md-2">
+                                    @Html.Label("Group", new { @class = "required" })
+                                    @Html.DropDownList("ddlGroup", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                </div>
+                                <div class="col-md-2">
+                                    @Html.Label("Task", new { @class = "required" })
+                                    @Html.DropDownList("ddlTask", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                </div>
+                                <div class="col-md-2">
+                                    @Html.Label("Deadline", new { @class = "" })
+                                    @Html.TextBoxFor(model => model.Reminder, new { @class = "form-control" })
+                                </div>
+                                <div class="col-md-2">
+                                    @Html.Label("Status", new { @class = "required" })
+                                    @Html.DropDownList("ddlStatus", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left: 5px; margin-top: 5px;">
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.Name, new { @class = "required" })
+                                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Name)
+                                    @Html.HiddenFor(model => model.ActionId)
+                                </div>
+                                <div class="col-md-2">
+                                    @Html.LabelFor(model => model.ActionSequence, new { @class = "required" })
+                                    @Html.TextBoxFor(model => model.ActionSequence, new { @class = "form-control" })
+                                </div>
+                                @*<div class="col-md-2">
+                                    @Html.LabelFor(model => model.ExecutionReminder, new { @class = "required" })
+                                    @Html.TextBoxFor(model => model.ExecutionReminder, new { @class = "form-control", @readonly = "readonly" })                                   
+                                </div>*@
+                            </div>
+
+                            <div class="row" style="margin-left: 5px; margin-top: 5px;">
+
+                                <div class="col-md-10">
+                                    @Html.LabelFor(model => model.Description)
+                                    @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @rows = "10", @readonly = "readonly" })
+                                    @*@Html.ValidationMessageFor(model => model.Description)*@
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+
+
+    <script type="text/javascript" src="~/Scripts/Target/ActionMaster.js"></script>
+
+}
+

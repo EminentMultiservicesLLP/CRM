@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TodayTask" targetNamespace="http://tempuri.org/TodayTask.xsd" xmlns:mstns="http://tempuri.org/TodayTask.xsd" xmlns="http://tempuri.org/TodayTask.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="DefaultConnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DefaultConnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.DefaultConnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TodayTask" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TodayTask" msprop:Generator_UserDSName="TodayTask">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Report" msprop:Generator_TableClassName="ReportDataTable" msprop:Generator_TableVarName="tableReport" msprop:Generator_TablePropName="Report" msprop:Generator_RowDeletingName="ReportRowDeleting" msprop:Generator_RowChangingName="ReportRowChanging" msprop:Generator_RowEvHandlerName="ReportRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportRowDeleted" msprop:Generator_UserTableName="Report" msprop:Generator_RowChangedName="ReportRowChanged" msprop:Generator_RowEvArgName="ReportRowChangeEvent" msprop:Generator_RowClassName="ReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LoginName" msprop:Generator_ColumnVarNameInTable="columnLoginName" msprop:Generator_ColumnPropNameInRow="LoginName" msprop:Generator_ColumnPropNameInTable="LoginNameColumn" msprop:Generator_UserColumnName="LoginName" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" msprop:Generator_ColumnVarNameInTable="columnClientName" msprop:Generator_ColumnPropNameInRow="ClientName" msprop:Generator_ColumnPropNameInTable="ClientNameColumn" msprop:Generator_UserColumnName="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerAnswerName" msprop:Generator_ColumnVarNameInTable="columnCustomerAnswerName" msprop:Generator_ColumnPropNameInRow="CustomerAnswerName" msprop:Generator_ColumnPropNameInTable="CustomerAnswerNameColumn" msprop:Generator_UserColumnName="CustomerAnswerName" type="xs:string" minOccurs="0" />
+              <xs:element name="TypeName" msprop:Generator_ColumnVarNameInTable="columnTypeName" msprop:Generator_ColumnPropNameInRow="TypeName" msprop:Generator_ColumnPropNameInTable="TypeNameColumn" msprop:Generator_UserColumnName="TypeName" type="xs:string" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" type="xs:string" minOccurs="0" />
+              <xs:element name="FollowUpDate" msprop:Generator_ColumnVarNameInTable="columnFollowUpDate" msprop:Generator_ColumnPropNameInRow="FollowUpDate" msprop:Generator_ColumnPropNameInTable="FollowUpDateColumn" msprop:Generator_UserColumnName="FollowUpDate" type="xs:string" minOccurs="0" />
+              <xs:element name="IsCompleted" msprop:Generator_ColumnVarNameInTable="columnIsCompleted" msprop:Generator_ColumnPropNameInRow="IsCompleted" msprop:Generator_ColumnPropNameInTable="IsCompletedColumn" msprop:Generator_UserColumnName="IsCompleted" type="xs:string" minOccurs="0" />
+              <xs:element name="IsCompletedRemark" msprop:Generator_ColumnVarNameInTable="columnIsCompletedRemark" msprop:Generator_ColumnPropNameInRow="IsCompletedRemark" msprop:Generator_ColumnPropNameInTable="IsCompletedRemarkColumn" msprop:Generator_UserColumnName="IsCompletedRemark" type="xs:string" minOccurs="0" />
+              <xs:element name="EntryDate" msprop:Generator_ColumnVarNameInTable="columnEntryDate" msprop:Generator_ColumnPropNameInRow="EntryDate" msprop:Generator_ColumnPropNameInTable="EntryDateColumn" msprop:Generator_UserColumnName="EntryDate" type="xs:string" minOccurs="0" />
+              <xs:element name="SectorName" msprop:Generator_ColumnVarNameInTable="columnSectorName" msprop:Generator_ColumnPropNameInRow="SectorName" msprop:Generator_ColumnPropNameInTable="SectorNameColumn" msprop:Generator_UserColumnName="SectorName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,109 @@
+﻿@model CRM.Areas.Target.Models.ExecutionModel
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <style>
+        .pq-grid-row {
+            background: #88b8ff;
+            color: #333;
+        }
+    </style>
+    <fieldset>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-groupingBoder">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a class="collapsediv" data-toggle="collapse" href="#SearchDetails" style="color: white">
+                                Execution
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+                        <div class="panel-body">
+                            <div class="container fill">
+                                <fieldset>
+                                    <div class="col-md-1">
+                                        <label for="date" class="required">Action Deadline</label>
+                                        @*<input class="form-control" id="actionsOnDate" type="text" />*@
+
+                                        <div class='input-group date' id='actionsOnDate'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1" style="margin-right: -45px;">
+                                        <br />
+                                        <button type="button" id="btnGo" class="btn btn-warning" title="Click Here To View" style="padding: 4px 26px;">Go</button>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        @Html.Label("Nature", new { @class = "required" })
+                                        @Html.DropDownList("ddlNature", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                    </div>
+                                    <div class="col-md-2">
+                                        @Html.Label("Group", new { @class = "required" })
+                                        @Html.DropDownList("ddlGroup", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                    </div>
+                                    @*<div class="col-md-2">
+                                        @Html.Label("Task", new { @class = "required" })
+                                        @Html.DropDownList("ddlTask", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                    </div>
+                                    <div class="col-md-1">
+                                        @Html.Label("Status", new { @class = "required" })
+                                        @Html.DropDownList("ddlStatus", new SelectList(string.Empty, "Value", "Text"), "Select", new { @class = "form-control" })
+                                    </div>*@
+                                    <div class="col-md-2">
+                                        <br />
+                                        <button type="button" id="btnSave" class="btn btn-success" title="Save Here" style="padding: 4px 26px;">Save</button>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+                    <div id="SearchDetails" class="panel-collapse collapse in" aria-expanded="true">
+                        <div class="panel-body">
+                            <div class="container fill">
+                                <div id="ExecutionGrid"></div>
+                            </div>
+                        </div>
+                    </div>
+    @* History Pop-Up Modal*@
+                    <div class="modal" id="HistoryPopUpModal" role="dialog" data-backdrop="false">
+                        <div class="modal-dialog" style="width: 67%;">
+                            <div class="modal-content" >
+                                <div class="modal-header">
+                                    <div class="col-sm-8 col-md-8">
+                                        <h4 class="modal-title"><b>Execution History</b></h4>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4">
+                                        <button type="button" class="close" data-dismiss="modal" style="align-content:flex-end">&times;</button>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="ExecutionHistoryGrid"></div>
+                                </div>
+                                <div class="modal-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+    </fieldset>
+
+
+    <script type="text/javascript" src="~/Scripts/Target/Execution.js"></script>
+
+}
+

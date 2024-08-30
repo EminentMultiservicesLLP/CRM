@@ -1,0 +1,88 @@
+﻿@using System.Web.Mvc.Html
+@model CRM.Areas.Admin.Models.UserProfile
+
+<fieldset>
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-groupingBoder">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a class="collapsediv" data-toggle="collapse" href="#UserDetails" style="color: white">
+                            User Details
+                        </a>
+                    </div>
+                </div>
+                <div id="UserDetails" class="panel-collapse collapse in" aria-expanded="true">
+                    <div class="panel-body">
+                        <div class="container fill">
+                            <div id="UserDetailsGrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-groupingBoder">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a class="collapsediv" data-toggle="collapse" href="#UserEntry">
+                            Create User
+                        </a>
+                    </div>
+                </div>
+                <div id="UserEntry" class="panel-collapse collapse in" aria-expanded="true">
+                    <div class="panel-body">
+                        <div class="row" style="margin-left: 1rem; margin-top: 1rem;">
+                            <div class="col-sm-11">
+                                <div class="row submit-row">
+                                    <div class="col-md-12 mb-md-0">
+                                        @*<button type="button" class="btn btn-primary" id="btnAdd">Add User</button>*@
+                                        <button type="button" class="btn btn-warning" id="btnReset">Reset</button>
+                                        <button type="button" class="btn btn-success" id="btnSave">Save</button>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="form-group form-horizontal">
+                                        <div class="col-sm-3">
+                                            @Html.Label("Enter User Name", new { @class = "required" })
+                                            @Html.TextBoxFor(m => m.LoginName, new { placeholder = "Login Name", @class = "form-control " })
+                                        </div>
+                                        <div class="col-sm-3">
+                                            @Html.Label("Enter Password", new { @class = "required" })
+                                            @Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control" })
+                                            <span toggle="#Password" id="togglePassword" class="fa fa-fw fa-eye field-eye-icon toggle-password"></span>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            @Html.Label("Select Role", new { @class = "required" })
+                                            @Html.DropDownList("ddlRole", new SelectList(string.Empty, "Value", "Text"), "-- Select Role --", new { @class = " form-control" })
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <br />
+                                            @Html.Label("De-Activate")
+                                            @Html.CheckBoxFor(m => m.Deactive)
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</fieldset>
+<script src="~/Scripts/Admin/UserProfile.js"></script>
+
+
+
+

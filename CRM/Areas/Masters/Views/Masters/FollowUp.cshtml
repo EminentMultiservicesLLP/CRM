@@ -1,0 +1,54 @@
+﻿@model CRM.Areas.Masters.Models.FeedbackMaster
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+
+    <fieldset>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-groupingBoder">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+
+                            Follow Up
+
+                        </div>
+                    </div>
+                    <div class="container fill">
+                        <div class="row" style="padding-bottom:10px">
+
+                            <div class="col-md-2">
+                                @Html.LabelFor(m => m.Date, new { })
+                                <div class='input-group date' id='Date'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-2" style="padding-top:15px">
+                                <button type="button" id="btnShow" class="btn btn-success" title="Click Here To Show">Show</button>
+                            </div>
+                        </div>
+
+                        <div id="SearchDetails" class="panel-collapse collapse in" aria-expanded="true">
+                            <div id="Searchgrid"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </fieldset>
+}
+<script src="~/Scripts/Masters/TodayActivity.js"></script>
+

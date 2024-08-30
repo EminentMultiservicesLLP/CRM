@@ -1,0 +1,90 @@
+﻿@model CRM.Areas.Admin.Models.UserConfigurationMaster
+<style>
+    .uploadDoc {
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid #333;
+        margin-top: 12px;
+        border-radius: 10px;
+    }
+
+    .docClass {
+        border: solid 2px #2e6da4;
+        margin: 3px;
+        border-radius: 10px;
+        background: lightcyan;
+    }
+
+    .docClick {
+        border: solid 2px #2e6da4;
+        margin: 3px;
+        border-radius: 8px;
+        background: bisque;
+    }
+
+    li {
+        padding: 5px;
+    }
+</style>
+<fieldset>
+    <div class="panel-groupingBoder">
+        <div class="panel-heading">
+            <div class="panel-title">
+                Upload Documents
+            </div>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+            <div class="panel-body">
+                <div class="container fill">
+                    <div class="row">
+                        <div class="col-xs-12 col-xs-12">
+                            <fieldset class="fieldsetCustom">
+                                <div class="row col-sm-12 col-md-12">
+                                    <div class="row">
+                                        <div class="container">
+                                            <div class="col-md-2">
+                                                @Html.Label("Select Financial Year", new { @class = "required" })
+                                                @Html.DropDownList("ddlFinancialYear", new SelectList(string.Empty, "Value", "Text"), "-- Select Financial Year --", new { @class = " form-control" })
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row" id="mainDiv">
+
+                                    </div>
+                                </div>
+                                <div id="uploader" class="col-sm-12 col-md-12">
+
+                                </div>
+                                <div class="text-center" id="Button">
+                                    <a class="btn btn-new"><i class="fa fa-plus"></i> Add new</a>
+                                    <a class="btn btn-next"><i class="fa fa-paper-plane"></i> submit</a>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</fieldset>
+<div class="modal" id="AttchmentsPoPupModal" role="dialog" data-backdrop="false">
+    <div class="modal-dialog">
+
+        <div class="modal-content" style="width:800px;height:100%;display:inline-block;">
+            <div class="modal-header">
+                <h4 class="modal-title">Document Attachments</h4>
+                <button type="button" class="close" data-dismiss="modal" style="align-content:flex-end">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="clear:both">
+                    <iframe id="viewer" frameborder="1" scrolling="yes" width="760" height="600"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/Attendance/DocumentUpload.js"></script>

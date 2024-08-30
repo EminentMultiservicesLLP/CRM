@@ -1,0 +1,43 @@
+﻿@model CRM.Areas.Attendance.Models.AttendanceReport
+<style>
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 0;
+        border-top: 1px solid #e2dcdc;
+    }
+    button {
+        margin-bottom: 0px;
+    }
+</style>
+<fieldset>
+
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-groupingBoder">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a class="collapsediv" data-toggle="collapse" href="#attendanceReport" style="color: white">
+                            Attendance Report
+                        </a>
+                    </div>
+                </div>
+                <div id="attendanceReport" class="panel-collapse collapse in" aria-expanded="true">
+                    <div class="panel-body">
+                        <div class="container fill">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    @Html.Label("Select Financial Year", new { @class = "required" })
+                                    @Html.DropDownList("ddlFinancialYear", new SelectList(string.Empty, "Value", "Text"), "-- Select Financial Year --", new { @class = " form-control" })
+                                </div>
+                            </div>
+                            <hr />
+                            <div id="AttendanceReportGrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+<script src="~/Scripts/Attendance/AttendanceReport.js"></script>

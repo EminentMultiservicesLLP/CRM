@@ -1,0 +1,146 @@
+﻿@model CRM.Areas.Attendance.Models.DeveloperWorkModel
+
+<style>
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 0;
+        border-top: 1px solid #e2dcdc;
+    }
+
+    th {
+        text-align: center;
+        background-color: #E7E7E7;
+    }
+
+    .header {
+        text-align: center;
+        background-color: #337ab7;
+        color: #fff;
+    }
+
+    table {
+        border: outset;
+    }
+
+    input {
+        margin: 2px;
+    }
+</style>
+<fieldset>
+    <div class="panel-groupingBoder">
+        <div class="panel-heading">
+            <div class="panel-title">
+                Developer Work Form
+            </div>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+            <div class="panel-body">
+                <div class="container fill">
+                    <div class="row">
+                        <div class="col-md-12" style="margin-left: 10px;">
+                            <button type="button" id="btnSave" class="btn btn-success" onclick="SaveDeveloperWork()">Save</button>
+                            <button type="button" class="btn btn-warning" id="btnReset" style=" margin-left: 15px;" onclick="clearFormData()">Clear</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-3">
+                                @Html.Label("Select Financial Year", new { @class = "required" })
+                                @Html.DropDownList("ddlFinancialYear", new SelectList(string.Empty, "Value", "Text"), "-- Select Financial Year --", new { @class = " form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-sm-3">
+                                <label for="clientType" class="required">Client Type : </label>
+                                <input class="form-control" placeholder="Client Type" id="clientType" type="text"  disabled/>
+                            </div>                                  
+                         
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="header" scope="col">Months</th>
+                                        <th class="header" scope="col">Task </th>
+                                        <th class="header" scope="col">Result</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Apr</th>
+                                        <td><input class="form-control " placeholder="Apr Task" id="aprTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Apr Result" id="aprResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">May</th>
+                                        <td><input class="form-control " placeholder="May Task" id="mayTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="May Result" id="mayResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Jun</th>
+                                        <td><input class="form-control " placeholder="Jun Task" id="junTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Jun Result" id="junResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Jul</th>
+                                        <td><input class="form-control " placeholder="Jul Task" id="julTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Jul Result" id="julResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Aug</th>
+                                        <td><input class="form-control " placeholder="Aug Task" id="augTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Aug Result" id="augResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Sept</th>
+                                        <td><input class="form-control " placeholder="Sept Task" id="sepTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Sept Result" id="sepResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Oct</th>
+                                        <td><input class="form-control " placeholder="Oct Task" id="octTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Oct Result" id="octResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Nov</th>
+                                        <td><input class="form-control " placeholder="Nov Task" id="novTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Nov Result" id="novResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Dec</th>
+                                        <td><input class="form-control " placeholder="Dec Task" id="decTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Dec Result" id="decResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Jan</th>
+                                        <td><input class="form-control " placeholder="Jan Task" id="janTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Jan Result" id="janResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Feb</th>
+                                        <td><input class="form-control " placeholder="Feb Task" id="febTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Feb Result" id="febResult" type="text"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Mar</th>
+                                        <td><input class="form-control " placeholder="Mar Task" id="marTask" type="text" /></td>
+                                        <td><input class="form-control " placeholder="Mar Result" id="marResult" type="text" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</fieldset>
+<script src="~/Scripts/Attendance/DeveloperWork.js"></script>

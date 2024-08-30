@@ -1,0 +1,81 @@
+﻿@model CRM.Areas.Admin.Models.EminentCompliancesModel
+<style>
+    #content-box {
+        margin: auto;
+        width: 50%;
+        text-align: justify;
+        padding: 5px 40px;
+        border: 0px solid black;
+        box-shadow: 0 10px 20px rgba(0, 0, 0)
+    }
+
+    @@media (max-width: 637px) {
+        #content-box {
+            width: 91%;
+            padding: 2px 26px;
+            border: 0px solid black;
+            box-shadow: 0 10px 20px rgba(0, 0, 0)
+        }
+    }
+</style>
+
+<fieldset>
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-groupingBoder">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        Eminent Compliances Form
+                    </div>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse in" aria-expanded="true">
+                    <div class="panel-body">
+                        <div class="container fill">
+                            <fieldset>
+                                <div class="row" >
+
+                                    <div class="d-flex justify-content-center" id="content-box">
+                                        <h2 style="text-align:center;padding-bottom: 30px;"> Compliance </h2>
+                                        <div id="compliance"></div>
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        GetCompliances();
+        function GetCompliances() {
+            var antiForgeryToken = $("input[name=__RequestVerificationToken]").val();
+            $.ajax({
+                headers: {
+                    "__RequestVerificationToken": antiForgeryToken
+                },
+                type: 'GET',
+                url: "/Compliances/GetCompliances",
+                dataType: "json",
+                success: function (response) {
+                    if (response.data.length > 0) {
+                        $("#compliance").html(response.data[0].Compliance);
+                    }
+                    else {
+                        ShowAlert("Warning", "NO DATA TO SHOW.")
+                    }
+                }
+            });
+        }
+    })
+
+</script>

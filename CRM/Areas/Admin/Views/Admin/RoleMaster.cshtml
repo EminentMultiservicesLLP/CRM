@@ -1,0 +1,70 @@
+﻿@using System.Web.Mvc
+@using System.Web.Mvc.Html
+@model CRM.Areas.Admin.Models.RoleMaster
+<fieldset>
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-groupingBoder">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a class="collapsediv" data-toggle="collapse" href="#RoleDetails" style="color: white">
+                            Role Details
+                        </a>
+                    </div>
+                </div>
+                <div id="RoleDetails" class="panel-collapse collapse in" aria-expanded="true">
+                    <div class="panel-body">
+                        <div class="container fill">
+                            <div id="RoleDetailsGrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-groupingBoder">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a class="collapsediv" data-toggle="collapse" href="#SearchDetails_RoleAccess">
+                            User
+                        </a>
+                    </div>
+                </div>
+                <div id="SearchDetails_RoleAccess" class="panel-collapse collapse in" aria-expanded="true">
+                    <div class="panel-body">
+                        <div class="fill" style=" margin-left: 15px; }">
+                            <div class="row">
+                                <div class="col-md-4" @*style="display:none"*@>
+                                    @Html.Label("Role", new { @class = "required" })
+                                    <input class="form-control" placeholder="Role" id="roleName" type="text" name="roleName" />
+                                    @*@Html.DropDownList("ddlRole", new SelectList(string.Empty, "Value", "Text"), "-- Select Role --", new { @class = " form-control" })*@
+                                </div>
+                                <div class="col-md-2">
+                                    <br />
+                                    <button type="button" class="btn btn-warning" id="btnSave" onclick="ClearFormData()">Clear</button>
+                                    <button type="button" class="btn btn-success" id="btnSave" onclick="SaveRoleAccess()">Save</button>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Parent Menu List</h5>
+                                    <div id="ParentMenuGrid"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Child Menu List</h5>
+                                    <div id="ChildMenuGrid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+<script src="~/Scripts/Admin/RoleMaster.js"></script>
